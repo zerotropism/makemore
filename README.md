@@ -1,17 +1,24 @@
 # makemore
 
-Reimplementation of @karpathy's makemore course.
+A character-level language model, reimplemented from scratch. Follows Andrej Karpathy's
+[makemore](https://github.com/karpathy/makemore), reimplemented rather than forked.
 
-## Requirements
+**Work in progress.** The notebook currently covers the bigram model: counting character pairs,
+turning the counts into probabilities, and sampling names from them. The neural network
+formulation, and everything after it, is not written yet.
 
-* Python 3.10
-* run `pip install -r requirements.txt`
+If you are looking for the finished counterpart, [micrograd](https://github.com/zerotropism/micrograd)
+is the same exercise carried through: an annotated autodiff engine with a trained perceptron.
 
-## Definition
+## Run it
 
-An autoregressive character-level language model for making more things.
+```bash
+uv sync --all-groups
+uv run jupyter lab notebook.ipynb
+```
 
-## Content
+## Tests
 
-* `names.txt` dataset
-* `notebook.ipynb` building the entire reasoning
+```bash
+uv run pytest
+```
